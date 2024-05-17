@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2c3e50; /* Warna latar belakang di luar kotak */
+}
+
+.container {
+    background: #ecf0f1;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.container:hover {
+    border-color: #3498db; /* Warna garis kotak menyala */
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50; /* Warna teks judul */
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e; /* Warna teks label */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #3498db; /* Warna garis input saat fokus */
+    outline: none;
+}
+
+button {
+    width: 48%; /* Menentukan lebar tetap untuk tombol */
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s, background 0.3s;
+    box-sizing: border-box; /* Memastikan ukuran tetap */
+}
+
+button:hover {
+    background: #2980b9; /* Warna tombol saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek tombol timbul */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.button-group button {
+    width: 48%;
+}
+
+.button-group button:hover {
+    background: #2980b9; /* Warna tombol saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek tombol timbul */
+}
+.sticker {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+#backButton {
+    position: absolute; /* Posisi absolut untuk tombol back */
+    left: 0; /* Awal posisi */
+    top: 0; /* Menetapkan posisi tetap di atas */
+}
+button {
+    width: 48%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s, background 0.3s;
+    position: relative;
+}
+
+button:hover {
+    background: #2980b9; /* Warna tombol saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek tombol timbul */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    position: relative; /* Tambahkan posisi relatif untuk container */
+    height: 48px; /* Menyesuaikan tinggi container agar sama dengan tinggi tombol */
+}
+
+.button-group button {
+    position: absolute;
+    top: 0; /* Menjaga tombol di posisi atas dalam container */
+}
+
+.button-group button#backButton {
+    left: 0; /* Posisi awal tombol Back */
+}
+
+.button-group button#nextButton {
+    right: 0; /* Posisi awal tombol Next */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

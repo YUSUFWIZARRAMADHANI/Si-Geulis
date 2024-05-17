@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Letter!</h1>
+        <form action="next.html">
+            <div class="input-group">
+                <label for="username">Nama</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Ttl</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+     <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Mencegah form submit default
+
+            const username = document.getElementById('username').value;
+            const dob = document.getElementById('dob').value;
+            const phoneNumber = '6287862077052'; // Ganti dengan nomor WhatsApp tujuan
+            const message = `Username: ${username}\nDate of Birth: ${dob}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+            // Buat iframe untuk mengirim pesan ke WhatsApp
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = whatsappURL;
+            document.body.appendChild(iframe);
+
+            // Tunggu sebentar sebelum mengarahkan ke halaman berikutnya
+            setTimeout(() => {
+                window.location.href = 'next.html';
+            }, 1000); // 1 detik
+        }
+    </script>
+</body>
+</html>

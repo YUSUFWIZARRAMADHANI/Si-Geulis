@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="sticker3.gif" alt="Animated Sticker" class="sticker">
+        <p>Please leave your comment below:</p>
+        <form id="commentForm" onsubmit="sendComment(event)">
+            <div class="input-group">
+                <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..." required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        function sendComment(event) {
+            event.preventDefault(); // Mencegah form submit default
+
+            const comment = document.getElementById('comment').value;
+            const phoneNumber = '6287862077052'; // Ganti dengan nomor WhatsApp tujuan dengan format internasional
+            const message = `Comment: ${comment}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+            // Buat iframe untuk mengirim pesan ke WhatsApp
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = whatsappURL;
+            document.body.appendChild(iframe);
+
+            // Tampilkan pesan konfirmasi atau arahkan ke halaman lain
+            alert('Your comment has been sent!');
+        }
+    </script>
+</body>
+</html>
